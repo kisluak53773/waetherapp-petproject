@@ -1,0 +1,30 @@
+:root{
+  --body_background:white;
+  --primary_color:white;
+  --secondary_color:rgba(71, 147, 255, 0.2);
+  --dropdown_border:none;
+  --font_color: black;
+}
+
+[data-theme="dark"]{
+  --body_background:#0D1117;
+  --primary_color:#4F4F4F;
+  --secondary_color:#4F4F4F;
+  --dropdown_border:1px solid black;
+  --font_color: white;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--body_background);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

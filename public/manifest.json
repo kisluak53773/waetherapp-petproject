@@ -1,0 +1,70 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo65.png",
+      "type": "image/png",
+      "sizes": "65x65"
+    },
+    {
+      "src": "murky48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "rain48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "smallRain48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "smallRainSun48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "sunny48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "temperature.png",
+      "type": "image/png",
+      "sizes": "28x50"
+    },
+    {
+      "src": "humidity.png",
+      "type": "image/png",
+      "sizes": "19x19"
+    },
+    {
+      "src": "pressure.png",
+      "type": "image/png",
+      "sizes": "19x19"
+    },
+    {
+      "src": "wind.png",
+      "type": "image/png",
+      "sizes": "40x34"
+    },
+    {
+      "src": "background.png",
+      "type": "image/png",
+      "sizes": "920x404"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

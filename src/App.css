@@ -1,0 +1,355 @@
+.header{
+    display: flex;
+    align-items: center;
+    margin-left: 18.75%;
+    margin-top: 20px;
+}
+  
+.header__title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #4793FF;
+}
+
+.header__logo{
+  margin-right: 20px;
+  width: 65px;
+  height: 65px;
+}
+
+.header__drop{
+  margin-left: 33.44%;
+  cursor: pointer;
+  height: 28px;
+  width: 24px;
+}
+
+.header__select{
+  display: flex;
+  align-items: center;
+  width: 194px;
+  height: 37px;
+  background: var(--secondary_color);
+  border-radius: 10px;
+  margin-left: 25.67px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header__select-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 20px;
+}
+
+.header__select-triangle{
+  margin-left: 12px;
+}
+
+.header__select-triangle_rotate{
+  transform: rotate(180deg);
+  animation-name: rotate;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+  
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown{
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  background-color: var(--secondary_color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100px;
+  list-style: none;
+  text-align: center;
+  border: var(--dropdown_border)
+}
+
+.dropdown__item{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.dropdown__item:hover{
+  text-decoration: underline;
+}
+
+.current{
+  display: flex;
+  margin-left: 18.75%;
+  margin-top: 50px;
+}
+
+.weather{
+  width: 400px;
+  height: 300px;
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background: var( --primary_color);
+}
+  
+.weather__temperature{
+  display: flex;
+  align-items: center;
+  height: 210px;
+}
+
+.weather__temperature-data{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.weather__temperature-data-celsius{
+  width: 160px;
+  height: 117px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 117px;
+  color: #4793FF;
+}
+
+.weather__temperature-data-today{
+  margin-top: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  width: 174px;
+  height: 49px;
+  color: var(--font_color)
+}
+
+.weather__temperature-img{
+  width: 119px;
+  height: 119px;
+  margin-left: 61px;
+}
+
+.weather__time{
+  display: flex;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #939CB0;
+  margin-left: 18px;
+}
+
+.weather__city{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #939CB0;
+  margin-left: 18px;
+}
+
+.details{
+  margin-left: 50px;
+  width: 750px;
+  height: 300px;
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  background: var(--primary_color);
+  background: no-repeat url("../public/background.png");
+  background-size: 460px 202px;
+  background-position: top right;
+}
+
+.details__items{
+  margin-top: 42px;
+margin-left: 32px;
+}
+
+.details__items-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.details__items-item-image{
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details__items-item-title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #939CB0;
+  margin-left: 20px;
+}
+
+.details__items-item-description{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 20px;
+  color: var(--font_color);
+}
+
+.skeleton {
+  background-color: rgb(199, 199, 199);
+  border-radius: 0.25rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.skeleton__temperature{
+  width: 160px;
+  height: 117px;
+  margin-top: 20px;
+}
+
+.skeleton__today{
+  width: 174px;
+  height: 49px;
+}
+
+.skeleton__img{
+  width: 119px;
+  height: 119px;
+  margin-left: 67px;
+}
+
+.skeleton__time{
+  width: 164px;
+  height: 30px;
+}
+
+.skeleton__city{
+  width: 319px;
+  height: 30px;
+}
+
+.skeleton__item{
+  width: 457px;
+  height: 38px;
+}
+
+@media (max-width:576px){
+  .header{
+    display: flex;
+    align-items: center;
+    margin-left: 18.75%;
+    margin-top: 20px;
+}
+  
+.header__title{
+  font-size: 50px;
+}
+
+.header__logo{
+  margin-right: 20px;
+  width: 180px;
+  height: 180px;
+}
+
+.header__drop{
+  height: 80px;
+  width: 80px;
+}
+
+.header__select{
+  margin-right: 18.75%;
+  width: 100%;
+  height: 40px;
+}
+
+.header__select-text{
+  font-size: 30px;
+}
+
+.dropdown{
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  background-color: var(--secondary_color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100px;
+  list-style: none;
+  text-align: center;
+  border: var(--dropdown_border)
+}
+
+.current{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather{
+  width: 400px;
+  height: 300px;
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background: var( --primary_color);
+}
+
+.details{
+  width: 750px;
+  height: 300px;
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  background: var(--primary_color);
+  background: no-repeat url("../public/background.png");
+  background-size: 460px 202px;
+  background-position: top right;
+  margin-left:250px;
+  margin-top: 40px;
+}
+
+}
