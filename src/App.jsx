@@ -1,5 +1,5 @@
 import React, { useEffect }  from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import { fetchWeather } from './slices/weatherSlice';
 import Details from './components/Details';
@@ -8,6 +8,7 @@ import Header from './components/Header';
 
 function App() {
   const dispatch = useDispatch();
+  const error = useSelector(state => state.weatherSliceData.error)
 
   useEffect(()=>{
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -16,13 +17,15 @@ function App() {
   });
 
   return (
-    <>
+    error !== "" ? (
+      <>
       <Header />
       <section className="current">
         <Weather />
         <Details />
       </section>
     </>
+    ) : <h1>Error occurred</h1>
   );
 }
 
