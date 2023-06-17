@@ -39,11 +39,17 @@ const weatherSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchWeather.fulfilled, (state, action) => {
-      state.weather = { ...state.weather, ...action.payload };
-      state.isWeatherLoaded = true;
+      return {
+        ...state,
+        weather: action.payload,
+        isWeatherLoaded: true,
+      };
     });
     builder.addCase(fetchWeather.rejected, (state, action) => {
-      state.error = action.error.message;
+      return {
+        ...state,
+        error: action.error.message,
+      };
     });
   },
 });
