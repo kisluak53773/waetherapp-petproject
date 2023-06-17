@@ -13,6 +13,7 @@ export function getStateWithItems({ weather = {}, isWeatherLoaded = false }) {
     weatherSliceData: {
       weather,
       isWeatherLoaded,
+      error: "",
     },
   };
   return state;

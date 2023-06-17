@@ -7,6 +7,7 @@ import { REACT_API_KEY } from "../constants";
 const initialState = {
   weather: {},
   isWeatherLoaded: false,
+  error: "",
 };
 
 export const fetchWeather = createAsyncThunk(
@@ -38,8 +39,11 @@ const weatherSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchWeather.fulfilled, (state, action) => {
-      state.weather = action.payload;
+      state.weather = { ...state.weather, ...action.payload };
       state.isWeatherLoaded = true;
+    });
+    builder.addCase(fetchWeather.rejected, (state, action) => {
+      state.error = action.error.message;
     });
   },
 });

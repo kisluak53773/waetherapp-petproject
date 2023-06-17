@@ -20,6 +20,7 @@ describe("WeatherSlice", () => {
     expect(result).toEqual({
       weather: {},
       isWeatherLoaded: false,
+      error: "",
     });
   });
   describe("async thunk", () => {
