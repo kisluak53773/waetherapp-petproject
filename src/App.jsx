@@ -9,11 +9,11 @@ import Header from './components/Header';
 function App() {
   const dispatch = useDispatch();
 
-  // useEffect(()=>{
-  //   navigator.geolocation.getCurrentPosition((position)=>{
-  //     dispatch(fetchWeather({lat:position.coords.latitude,lon:position.coords.longitude}));
-  //   })
-  // });
+  useEffect(()=>{
+    navigator.geolocation.getCurrentPosition((position)=>{
+      dispatch(fetchWeather({lat:position.coords.latitude,lon:position.coords.longitude}));
+    })
+  });
 
   return (
     <>
