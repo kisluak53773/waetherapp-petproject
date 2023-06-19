@@ -19,22 +19,22 @@ export default function Details() {
     isWeatherLoaded ? (
       <div role="details" className="details">
         <div className="details__items">
-          <DetailsItem image={Temperature}>
+          <DetailsItem title={'Температура'} image={Temperature}>
             {String(weather.main.temp).slice(0, -3)}
             <sup>o</sup>
             - ощущается как
             {String(weather.main.feels_like).slice(0, -3)}
             <sup>o</sup>
           </DetailsItem>
-          <DetailsItem image={Preasure}>
+          <DetailsItem title={'Давление'} image={Preasure}>
           {weather.main.pressure}
             мм ртутного столба -
             {Number(weather.main.pressure) <= 760 ? 'Нормальное' : 'Повышеное'}
           </DetailsItem>
-          <DetailsItem image={Precipitation}>
+          <DetailsItem title={'Осадки'} image={Precipitation}>
             {weather.rain ? 'Присутствуют осадки' : 'Без осадков'}
           </DetailsItem>
-          <DetailsItem image={Wind} >
+          <DetailsItem title={'Ветер'} image={Wind} >
            {String(weather.wind.speed).split('.')[0]} м/с {direction} - легкий ветер
           </DetailsItem>
         </div>
