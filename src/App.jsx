@@ -12,21 +12,23 @@ function App() {
 
   useEffect(()=>{
     navigator.geolocation.getCurrentPosition((position)=>{
-      dispatch(fetchWeather({lat:position.coords.latitude,lon:position.coords.longitude}));
+      dispatch(fetchWeather({ lat:position.coords.latitude, lon:position.coords.longitude }));
     })
   });
 
-  return (
-    error !== "" ? (
-      <>
+  return error === "" ? (
+    <>
       <Header />
       <section className="current">
         <Weather />
         <Details />
       </section>
     </>
-    ) : <h1>Error occurred</h1>
-  );
+  ) : (
+    <div className="error">
+      <h1>Error {error} occured</h1>
+    </div>
+  )
 }
 
 export default App;

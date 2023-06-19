@@ -5,12 +5,11 @@ import { fetchWeather } from '../slices/weatherSlice';
 
 /* eslint linebreak-style: ["error", "windows"] */
 
-export default function DropdownItem({ item, setActive }) {
+export default function DropdownItem({ item }) {
   const dispatch = useDispatch();
 
   const handleClick = useCallback((e) => {
     dispatch(fetchWeather({ city: e.target.textContent }));
-    setActive(false);
   });
 
   return (
@@ -20,5 +19,4 @@ export default function DropdownItem({ item, setActive }) {
 
 DropdownItem.propTypes = {
   item: PropTypes.string.isRequired,
-  setActive: PropTypes.func.isRequired,
 };

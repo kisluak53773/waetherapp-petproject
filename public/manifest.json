@@ -61,6 +61,11 @@
       "src": "background.png",
       "type": "image/png",
       "sizes": "920x404"
+    },
+    {
+      "src": "search.png",
+      "type": "image/png",
+      "sizes": "50x50"
     }
   ],
   "start_url": ".",
