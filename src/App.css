@@ -35,7 +35,7 @@
 }
 
 .header__drop{
-  margin-left: 642px;
+  margin-left:50%;
   cursor: pointer;
   height: 28px;
   width: 24px;
@@ -84,8 +84,6 @@
 
 .dropdown{
   position: absolute;
-  top: 60px;
-  right: 200px;
   background-color: var(--secondary_color);
   border-radius: 10px;
   padding: 10px 20px;
